@@ -1,0 +1,128 @@
+@import "./fonts.scss";
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --text-blue: #213F7D;
+  --text-ash: #545F7D;
+}
+
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+/** utility classes */
+.font-regular {
+  font-family: "Avenir", sans-serif;
+  font-weight: normal;
+}
+
+.font-bold {
+  font-family: "Avenir", sans-serif;
+  font-weight: bold;
+}
+
+.font-medium {
+  font-family: "Avenir", sans-serif;
+  font-weight: 500; /* Medium */
+}
+
+.font-light {
+  font-family: "Avenir", sans-serif;
+  font-weight: 300; /* Light */
+}
+
+.work-sans-regular {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 450;
+  font-style: normal;
+}
+
+
+html > * {
+    margin: 0;
+    padding: 0;
+    font-family: "Avenir", sans-serif;
+    scrollbar-width: thin; 
+    overflow-y: hidden;
+}
+
+
+
+html,
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Avenir", sans-serif;
+}
+
+.text-blue {
+  color: var(--text-blue);
+}
+
+.text-ash {
+  color: var(--text-ash);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.no-s {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #d9d9d9 white;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 100vw;
+}
+
+
+/* Styles for small screens */
+@media (max-width: $breakpoint-small) {
+  html {
+    font-size: 35.5%;
+  }
+}
+
+/* Styles for medium screens */
+@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+  html {
+    font-size: 55.5%;
+  }
+}
+
+/* Styles for large screens */
+@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  html {
+    font-size: 35.5%;
+  }
+}
+
+/* Styles for extra large screens */
+@media (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+  html {
+    font-size: 45.5%;
+  }
+}
+
+/* Styles for very large screens (1440px and above) */
+@media (min-width: $breakpoint-xlarge) {
+  html {
+    font-size: 55.5%;
+  }
+}

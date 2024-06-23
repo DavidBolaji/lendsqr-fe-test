@@ -1,0 +1,52 @@
+.status-active {
+    color: #39d695;
+    background-color: #f3fcf8;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   border-radius: 10rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .status-inactive {
+    color: #545f7d67;
+    background-color: #545f7d27 !important;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .status-pending {
+    color: #E9B200;
+    background-color: #e9b3002f;
+    width: 8rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   border-radius: 10rem;
+    text-align: center;
+    font-size: 1.4rem;
+
+  }
+
+  .status-blacklisted {
+    color: #E4033B;
+    background-color: #E4033B26;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rem;
+    text-align: center;
+    font-size: 1.4rem;
+  }

@@ -1,0 +1,96 @@
+.main {
+  display: grid;
+  grid-template-columns: 22% 78%;
+  width: 100%;
+  height: 100vh;
+  background-color: #fbfbfb;
+
+  .sidebar {
+    background-color: #ffffff;
+    box-shadow: 0px 6px 10px 2px rgba(0, 0, 0, 0.04);
+    position: relative;
+    overflow: hidden;
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-top: 2.8rem;
+
+      li.title {
+        .name {
+          color: #213f7d;
+          margin-top: 0.2rem;
+          font-size: 1.4rem;
+          font-weight: 500;
+        }
+      }
+
+      li {
+        margin: 10px 0;
+        padding-left: 2.5rem;
+
+        &:hover:not(.title) {
+          background-color: #f3fcfc;
+        }
+
+        a {
+          display: flex;
+          text-decoration: none;
+          padding: 1rem;
+          font-size: 1.6rem;
+          color: #213f7d;
+          font-weight: 500;
+
+          .name {
+            color: #57698e !important;
+            margin-top: 0.2rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            font-family: "Work Sans", sans-serif;
+          }
+
+          .name.organization {
+            font-size: 1.8rem;
+          }
+
+          .caret {
+            margin-left: 0.5rem;
+            margin-top: 0.8rem;
+          }
+          .icon {
+            margin-right: 1.5rem;
+            margin-top: 0.5rem;
+            color: #cad1e0 !important;
+          }
+        }
+      }
+
+      li.active {
+        .name {
+          color: #213f7d !important;
+        }
+        background-color: #f3fcfc;
+        border-left: 3px solid #39cdcc;
+      }
+    }
+  }
+
+  .page {
+    padding-left: 7.5rem;
+    padding-top: 7.5rem;
+    background-color: #fbfbfb;
+    overflow-y: auto; 
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+    width: 93%;
+    padding-bottom: 15rem;
+  //  position: fixed;
+
+  
+  }
+
+  .page::-webkit-scrollbar {
+    display: none; 
+  }
+}

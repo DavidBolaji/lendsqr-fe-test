@@ -1,0 +1,39 @@
+.input-cont {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  border-radius: 0.5rem;
+  height: 5rem;
+  border: 2px solid #545f7d26;
+  overflow: hidden;
+   :focus-within {
+      border: 1px solid blue
+  }
+}
+
+.input {
+  border: none;
+  padding: 0 0 0 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  width: 100%;
+  ::placeholder {
+    font-size: 1.2rem;
+  }
+}
+
+.pass-control {
+  position: absolute;
+  top: 50%;
+  right: 1.76rem;
+  transform: translate(0%, -50%);
+  cursor: pointer;
+  color: #39CDCC;
+  font-size: 1.2rem;
+}

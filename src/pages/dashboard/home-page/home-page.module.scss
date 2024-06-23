@@ -1,0 +1,9 @@
+
+.card-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.6rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-right: 200px;
+  }

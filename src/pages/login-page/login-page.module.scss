@@ -1,0 +1,104 @@
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+.cont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  height: 90rem;
+}
+
+.left {
+  width: 50%;
+  background-color: #fcfcfc;
+}
+
+.logo {
+  padding: 10.6em 0 13.9em 9.7em;
+}
+
+.right {
+  width: 50%;
+
+  .right_cont {
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 10rem;
+    padding-right: 10.7rem;
+  }
+
+  h1.heading {
+    align-items: flex-start;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 2.73rem;
+    font-weight: 400;
+    margin-bottom: 6rem;
+    margin-left: 0.1em
+  }
+}
+
+.sign-in {
+    margin-left: 6.7em;
+    margin-right: 6.9em;
+    img {
+        width: 60rem;
+    }
+}
+
+
+/* Styles for small screens */
+@media (max-width: $breakpoint-small) {
+ .left {
+  display: none;
+ };
+
+ .right {
+  width: 100%;
+ }
+ .cont {
+  height:100vh;
+}
+}
+
+/* Styles for medium screens */
+@media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+  .left {
+    display: none;
+   };
+  
+   .right {
+    width: 100%;
+   }
+
+   .cont {
+    height:100vh;
+  }
+}
+
+/* Styles for large screens */
+@media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+  .cont {
+    height:100vh;
+  }
+}
+
+/* Styles for extra large screens */
+@media (min-width: $breakpoint-large) and (max-width: $breakpoint-xlarge) {
+
+}
+
+/* Styles for very large screens (1440px and above) */
+@media (min-width: $breakpoint-xlarge) {
+
+}
