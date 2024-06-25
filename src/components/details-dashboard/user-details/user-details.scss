@@ -1,0 +1,117 @@
+.detail-cont {
+  height: 21rem;
+  background-color: white;
+  padding: 3rem 3rem 0 3rem;
+  margin-top: 4.6rem;
+  border-radius: .4rem;
+  box-shadow: 0.3rem .5rem 2rem  rgba(0, 0, 0, 0.04);
+
+  > * {
+    transform: scale(1.25) translate(10.5%, 10%);
+  }
+
+
+ .personal-cont {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    width: 10em;
+    height: 10em;
+    border-radius: 100%;
+    background-color: #21407d25;
+    display: grid;
+    place-items: center;
+    margin-right: 2rem;
+
+
+    > * {
+      font-size: 5rem;
+      color: #213F7D;
+    }
+  }
+
+  .name-cont {
+    padding-right: 3rem;
+    padding-bottom: 3.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+   
+    .name {
+      color: var(--text-blue);
+      font-size: 2.2rem;
+      font-family: var(--font-default);
+      font-weight: 500;
+      margin-bottom: .8rem;
+      transform: translate(0%, 50%);
+    }
+
+    .id {
+      transform: translate(1%, 120%);
+      font-size: 1.4rem;
+      font-family: var(--font-default);
+      font-weight: 400;
+    }
+  }
+
+  .star-cont {
+    border-right: 1px solid #545f7d5b;
+    border-left: 1px solid #545f7d5b;
+    padding: 2.3em 1.9em ;
+    text-align: center;
+
+
+    .name {
+      color: #545F7D;
+      font-size: 1.4rem;
+      font-family: var(--font-default);
+      margin-bottom: 1.4rem;
+      font-weight: 400;
+      
+    }
+
+    .star {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      > * {
+        font-size: 1.4rem;
+        color: #E9B200;
+        
+      }
+    }
+   
+  }
+
+  .balance-cont {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3.9rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+   
+    .name {
+      color: var(--text-blue);
+      font-size: 2.2rem;
+      font-family: var(--font-default);
+      font-weight: 500;
+      margin-bottom: .8rem;
+      transform: translate(0%, 80%);
+    }
+
+    .id {
+      transform: translate(1%, 80%);
+      font-size: 1.4rem;
+      font-family: var(--font-default);
+      font-weight: 400;
+      padding-bottom: 1.5rem;
+    }
+  }
+ }
+}

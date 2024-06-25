@@ -1,12 +1,13 @@
+import {  HTMLAttributes } from 'react'
 import classes from './title.module.scss'
 
-interface ITitle {
+interface ITitle extends HTMLAttributes<HTMLHeadingElement> {
     text: string
 }
 
-const Title:React.FC<ITitle> = ({text}) => {
+const Title:React.FC<ITitle> = ({text, className, ...rest}) => {
   return (
-    <h2 className={classes.text}>{text}</h2>
+    <h2 className={`${classes.text} ${className}`} {...rest}>{text}</h2>
   )
 }
 

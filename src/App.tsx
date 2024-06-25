@@ -3,6 +3,7 @@ import RootLayout from "./layouts/root-layout";
 import LoginPage from "./pages/login-page/login-page";
 import DashboardLayout from "./layouts/dashboard/dashboard-layout";
 import HomePage from "./pages/dashboard/home-page/home-page";
+import SingleUserPage from "./pages/dashboard/[userId]";
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: ':userId',
+        element: <SingleUserPage />,
       },
     ],
   },

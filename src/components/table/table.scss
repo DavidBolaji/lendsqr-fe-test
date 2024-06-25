@@ -1,5 +1,5 @@
 .table-container {
-  width: 115.7rem;
+  min-width: 115.7rem;
 
   table {
     width: 100%;
@@ -73,12 +73,21 @@
           border-radius: 4px;
         }
 
-        button {
+        button.filter-btn {
           padding: 0.5rem 1rem;
-          background-color: #007bff;
+          background-color: #39cdcc;
           color: #fff;
           border: none;
-          border-radius: 4px;
+          border-radius: 0.4rem;
+          cursor: pointer;
+        }
+
+        button.reset-btn {
+          padding: 0.5rem 1rem;
+          background-color: transparent;
+          border: 1px solid #545f7d;
+          color: #545F7D;
+          border-radius: 0.4rem;
           cursor: pointer;
         }
       }
@@ -107,22 +116,24 @@
 
     .dropdown-menu {
       position: absolute;
-      top: 90%;
+      top: 125%;
       right: 3rem;
       transform: translateY(-50%);
       background-color: #fff;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border: 1px solid #ccc;
+      border: 1px solid #545f7d0d;
       border-radius: 4px;
       z-index: 1;
-      width: 15rem;
+      width: 18rem;
+      height: 13rem;
       background-color: #fff;
 
       .dropdown-item {
-        padding: 0.5rem 1rem;
+        padding: 1.2rem 1rem 1.4rem 2rem;
         display: flex;
         align-items: center;
         cursor: pointer;
+        gap: 1rem;
 
         &:hover {
           background-color: #f4f4f4;
@@ -130,6 +141,12 @@
 
         .icon {
           margin-right: 0.5rem;
+        }
+
+        .text {
+          font-family: "Work Sans", sans-serif;
+          font-weight: 500;
+          font-size: 1.4rem;
         }
       }
     }

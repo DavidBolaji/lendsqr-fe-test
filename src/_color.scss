@@ -1,0 +1,30 @@
+$colors: (
+ "error": #E4033B,
+  "primary": #39CDCC,
+  "blue": #213F7D
+);
+
+@mixin border-color($color) {
+  border-color: map-get($colors, $color);
+}
+
+@mixin background-color($color) {
+  background-color: map-get($colors, $color);
+}
+
+@mixin text-color($color) {
+  color: map-get($colors, $color);
+}
+
+// Generate utility classes for each color
+@each $name, $color in $colors {
+  .b-#{$name} {
+    @include border-color($name);
+  }
+  .bg-#{$name} {
+    @include background-color($name);
+  }
+  .text-#{$name} {
+    @include text-color($name);
+  }
+}

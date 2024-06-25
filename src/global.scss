@@ -1,10 +1,14 @@
 @import "./fonts.scss";
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import './color';
 
 
 :root {
   --text-blue: #213F7D;
   --text-ash: #545F7D;
+  --error: #E4033B;
+  --primary: #39CDCC;
+  --font-default:  "Work Sans", sans-serif;
 }
 
 /* Define breakpoints */
@@ -35,9 +39,8 @@ $breakpoint-xlarge: 1200px;
 }
 
 .work-sans-regular {
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--font-default);
   font-optical-sizing: auto;
-  font-weight: 450;
   font-style: normal;
 }
 
@@ -65,6 +68,30 @@ body {
 
 .text-ash {
   color: var(--text-ash);
+}
+.text-error {
+  color: var(--error);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.transparent {
+  background-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6, p {
