@@ -73,6 +73,13 @@
           border-radius: 4px;
         }
 
+        .table-select {
+          padding: 0.5rem;
+          margin-bottom: 0.5rem;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
         button.filter-btn {
           padding: 0.5rem 1rem;
           background-color: #39cdcc;
@@ -195,7 +202,9 @@
         color: #545f7d;
 
         &.active {
-          color: #545f7d;
+          color: #171a23;
+          font-weight: 600;
+          
         }
       }
     }
@@ -220,6 +229,9 @@
       .rowsLimit2 {
         margin-left: 1rem;
         display: inline-block;
+        font-family: "Work Sans", sans-serif;
+        color: #545f7d;
+        font-size: 1.4rem;
       }
     }
   }

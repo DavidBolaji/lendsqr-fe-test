@@ -4,10 +4,17 @@ import Title from "../../../components/title/title";
 import CustomButton from "../../../components/button/custom-button";
 import UserDetail from "../../../components/details-dashboard/user-details/user-details";
 import Tabs from "../../../components/tab/tab";
+import { IUser } from "../../../api/fetch-users";
+import { useLendsqrContext } from "../../../context/context-provider";
+// import { useEffect } from "react";
 
 const SingleUserPage = () => {
   const { userId } = useParams();
-  console.log(userId);
+  const {getLocalUsers} =  useLendsqrContext()
+
+
+  const user = getLocalUsers()?.find((_: Partial<IUser>) => _.id === userId!) 
+ 
   return (
     <>
       <BackNav />
@@ -36,8 +43,8 @@ const SingleUserPage = () => {
           />
         </div>
       </div>
-      <UserDetail />
-      <Tabs />
+      <UserDetail user={user!} />
+      <Tabs user={user!} />
     </>
   );
 };

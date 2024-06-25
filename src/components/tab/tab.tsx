@@ -1,35 +1,112 @@
-import  { ReactNode, useState } from 'react';
+import { FC, ReactNode, useState } from 'react';
 import './tab.scss';
 import PersonalInfo from '../details-dashboard/personal-info/personal-info';
 import EducationEmployment from '../details-dashboard/education-employement/education-employement';
 import Socials from '../details-dashboard/socials/socials';
 import Guarantor from '../details-dashboard/guarantor/guarantor';
 import { FaEnvelope } from 'react-icons/fa';
+import { IUser } from '../../api/fetch-users';
 
-const Tabs = () => {
+const Tabs: FC<{ user: Partial<IUser> }> = ({ user }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
-    'General Details', 
-    'Documents', 
-    'Bank Details', 
-    'Loans', 
-    'Savings', 
-    'App and System'
+    'General Details',
+    'Documents',
+    'Bank Details',
+    'Loans',
+    'Savings',
+    'App and System',
   ];
 
+  const {
+    fname,
+    lname,
+    email,
+    bvn,
+    gender,
+    children,
+    phoneNumber,
+    maritalStatus,
+    education,
+    sector,
+    empDuration,
+    employmentStatus,
+    oEmail,
+    loan,
+    amount,
+    guarantor,
+    relationship,
+  } = user;
+
   const content: { [key: string]: ReactNode } = {
-    'General Details': <>
-    <PersonalInfo />
-    <EducationEmployment />
-    <Socials />
-    <Guarantor />
-    </>,
-    'Documents': <div className='flex'><FaEnvelope /></div>,
-    'Bank Details': <div className='flex'><FaEnvelope /></div>,
-    'Loans': <div className='flex'><FaEnvelope /></div>,
-    'Savings': <div className='flex'><FaEnvelope /></div>,
-    'App and System': <div className='flex'><FaEnvelope /></div>,
+    'General Details': (
+      <>
+        <PersonalInfo
+          {...{
+            fname: fname!,
+            lname: lname!,
+            email: email!,
+            bvn: bvn!,
+            gender: gender!,
+            children: children!,
+            phoneNumber: phoneNumber!,
+            maritalStatus: maritalStatus!,
+          }}
+        />
+        <EducationEmployment
+          {...{
+            education,
+            oEmail,
+            sector,
+            empDuration,
+            employmentStatus,
+            loan,
+            amount,
+          }}
+        />
+        <Socials
+          {...{
+            twitter: `@${fname}_${lname}`,
+            facebook: `${fname} ${lname}`,
+            instagram: `@${fname}_${lname}`,
+          }}
+        />
+        <Guarantor
+          {...{
+            ...guarantor,
+            email: email!,
+            relationship: relationship!,
+            phone: phoneNumber!,
+          }}
+        />
+      </>
+    ),
+    Documents: (
+      <div className="flex">
+        <FaEnvelope />
+      </div>
+    ),
+    'Bank Details': (
+      <div className="flex">
+        <FaEnvelope />
+      </div>
+    ),
+    Loans: (
+      <div className="flex">
+        <FaEnvelope />
+      </div>
+    ),
+    Savings: (
+      <div className="flex">
+        <FaEnvelope />
+      </div>
+    ),
+    'App and System': (
+      <div className="flex">
+        <FaEnvelope />
+      </div>
+    ),
   };
 
   const handleTabClick = (index: number) => {
@@ -51,11 +128,12 @@ const Tabs = () => {
             {tab}
           </div>
         ))}
-        <div className="border" style={{ width: `${tabWidth}%`, left: `${activeTab * tabWidth}%` }} />
+        <div
+          className="border"
+          style={{ width: `${tabWidth}%`, left: `${activeTab * tabWidth}%` }}
+        />
       </div>
-      <div className="tab-content">
-        {content[tabs[activeTab]]}
-      </div>
+      <div className="tab-content">{content[tabs[activeTab]]}</div>
     </div>
   );
 };
