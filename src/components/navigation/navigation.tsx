@@ -1,12 +1,16 @@
-import { FaBell, FaCaretDown } from 'react-icons/fa'
+import { FaBell, FaCaretDown, FaHamburger } from 'react-icons/fa'
 import { IMAGES } from '../../assets'
 import Search from '../search/search'
 import classes from './navigation.module.scss'
 import { Link } from 'react-router-dom'
+import { FC } from 'react'
 
-const Navigation = () => {
+const Navigation:FC<{toggle: () => void}> = ({toggle}) => {
   return (
     <nav className={classes.nav}>
+        <div className={classes.caret} onClick={toggle}>
+            <FaHamburger />
+        </div>
         <div className={classes.img}>
             <img src={IMAGES.Logo} className={classes['img-img']} alt="logo" />
         </div>

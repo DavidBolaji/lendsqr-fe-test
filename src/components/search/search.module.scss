@@ -1,5 +1,11 @@
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
 .search-input {
-  width: 42.7rem;
+  max-width: 42.7em;
   display: flex;
   height: 4.2rem;
   align-items: center;
@@ -40,3 +46,16 @@
     cursor: pointer;
   }
 }
+
+  /* Styles for small screens */
+  @media (max-width: $breakpoint-small) {
+ 
+  }
+  
+  /* Styles for medium screens */
+  @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .search-input {
+      max-width: 30rem;
+    }
+  }
+  

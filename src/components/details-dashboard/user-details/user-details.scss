@@ -1,3 +1,9 @@
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
 .detail-cont {
   height: 21rem;
   background-color: white;
@@ -115,3 +121,112 @@
   }
  }
 }
+
+  /* Styles for small screens */
+  @media (max-width: $breakpoint-small) {
+    .detail-cont {
+      height: auto;
+      background-color: white;
+      padding: 3rem;
+      margin-top: 4.6rem;
+      border-radius: .4rem;
+      box-shadow: 0.3rem .5rem 2rem  rgba(0, 0, 0, 0.04);
+      
+
+      > * {
+        transform: scale(1) translate(0%, 0%);
+        text-align: center;
+      }
+
+      .personal-cont {
+        flex-direction: column;
+
+        .name-cont {
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          border-bottom: 1px solid #21407d2d;
+          padding-bottom: 3rem;
+          width: 100%;
+
+          .name {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transform: translate(1.5%, 40%);
+          }
+        }
+
+        .avatar {
+          margin-right: 0;
+        }
+
+        .star-cont {
+          border-left: none;
+          border-right: none;
+          padding: 0;
+          margin: 3rem 0 0 0;
+         
+          width: 100%;
+          border-bottom: 1px solid #21407d2d;
+          padding-bottom: 2rem;
+        }
+      }
+    
+    }
+  }
+  
+  /* Styles for medium screens */
+  @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .detail-cont {
+      height: auto;
+      background-color: white;
+      padding: 3rem;
+      margin-top: 4.6rem;
+      border-radius: .4rem;
+      box-shadow: 0.3rem .5rem 2rem  rgba(0, 0, 0, 0.04);
+   
+
+      > * {
+        transform: scale(1) translate(0%, 0%);
+        text-align: center;
+      }
+
+      .personal-cont {
+        flex-direction: column;
+
+        .name-cont {
+          text-align: center;
+          margin: 0;
+          padding: 0;
+          border-bottom: 1px solid #21407d2d;
+          padding-bottom: 3rem;
+          width: 100%;
+
+          .name {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            transform: translate(1.5%, 40%);
+          }
+        }
+
+        .avatar {
+          margin-right: 0;
+        }
+
+        .star-cont {
+          border-left: none;
+          border-right: none;
+          padding: 0;
+          margin: 3rem 0 0 0;
+         
+          width: 100%;
+          border-bottom: 1px solid #21407d2d;
+          padding-bottom: 2rem;
+        }
+      }
+    
+    }
+   
+  }

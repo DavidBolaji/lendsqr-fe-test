@@ -1,3 +1,9 @@
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
 .nav {
   height: 11.5rem;
   background-color: white;
@@ -9,6 +15,9 @@
   position: sticky;
   top: 0;
 
+  > .caret {
+    display: none;
+  }
 
   .img {
     flex: 0.2;
@@ -33,6 +42,7 @@
 .notification-cont {
   display: flex;
   align-items: center;
+  padding-right: 2rem;
 
   .link {
     font-size: 1.6rem;
@@ -83,3 +93,99 @@
     }
   }
 }
+
+
+  /* Styles for small screens */
+  @media (max-width: $breakpoint-small) {
+    .nav {
+      justify-content: space-evenly;
+  
+      > .caret {
+        display: block;
+        font-size: 3rem;
+        color: var(--primary);
+        cursor: pointer;
+      }
+  
+      .img {
+        padding-left: 0rem;
+        margin-right: 0rem;
+        flex: 0;
+        .img-img {
+          width: 15rem;
+        }
+     
+      }
+     }
+  
+     .notification-cont {
+      display: flex;
+      align-items: center;
+      padding-right: 0;
+    
+      .link {
+        display: none;
+      }
+    
+      .svg {
+        margin-right: 2rem;
+        display: inline-block;
+      }
+    
+      .nav-end {
+        .avatar-cont {
+          .name {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Styles for medium screens */
+  @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+   .nav {
+    justify-content: space-evenly;
+
+    > .caret {
+      display: block;
+      font-size: 3rem;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .img {
+      padding-left: 0rem;
+      margin-right: 0rem;
+      flex: 0;
+      .img-img {
+        width: 15rem;
+      }
+   
+    }
+   }
+
+   .notification-cont {
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+  
+    .link {
+      display: none;
+    }
+  
+    .svg {
+      margin-right: 2rem;
+      display: inline-block;
+    }
+  
+    .nav-end {
+      .avatar-cont {
+        .name {
+          display: none;
+        }
+      }
+    }
+  }
+  }
+  

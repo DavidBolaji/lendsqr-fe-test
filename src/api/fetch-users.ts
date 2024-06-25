@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-// hc3fst8kcib1ytlbk3wlfdlcwcwwgez2ytklcnwq
+const KEY = import.meta.env.VITE_API_KEY
 export interface Guarantor {
     dob: string;
     fname: string;
@@ -37,7 +36,7 @@ export interface Guarantor {
 const fetchUsers = async () => {
   const response = await axios.get('https://api.json-generator.com/templates/Ap0hv1jd2zgr/data', {
     headers: {
-        Authorization: `Bearer ${'hc3fst8kcib1ytlbk3wlfdlcwcwwgez2ytklcnwq'}`
+        Authorization: `Bearer ${KEY}`
     }
   });
   return response.data;

@@ -23,4 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 .env
-,7z
+*.7z
