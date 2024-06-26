@@ -14,11 +14,11 @@ export interface Guarantor {
     fname: string;
     lname: string;
     amount: number;
-    gender: 'male' | 'female' | 'other';
+    gender: string;
     oEmail: string;
     rating: number;
     sector: string;
-    status: 'Active' | 'Inactive' | 'Pending' | 'Blacklisted';
+    status: string;
     children: null | number; // Adjust 'children' type as needed
     username: string;
     education: string;
@@ -39,7 +39,7 @@ const fetchUsers = async () => {
         Authorization: `Bearer ${KEY}`
     }
   });
-  return response.data;
+  return response.data.splice(0, 500);
 };
 
 export default fetchUsers;

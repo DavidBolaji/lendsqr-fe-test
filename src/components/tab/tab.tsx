@@ -112,7 +112,10 @@ const Tabs: FC<{ user: Partial<IUser> }> = ({ user }) => {
 
   const handleTabClick = (index: number) => {
     setActiveTab(index);
-    tabRefs.current[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+    tabRefs.current[index].scrollIntoView({
+      behavior: 'smooth',
+      inline: 'center',
+    });
   };
 
   const tabWidth = 100 / tabs.length;

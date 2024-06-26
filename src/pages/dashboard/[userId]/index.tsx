@@ -12,7 +12,6 @@ const SingleUserPage = () => {
   const { userId } = useParams();
   const {getLocalUsers} =  useLendsqrContext()
 
-
   const user = getLocalUsers()?.find((_: Partial<IUser>) => _.id === userId!) 
  
   return (
