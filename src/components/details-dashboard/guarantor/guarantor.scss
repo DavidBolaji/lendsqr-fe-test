@@ -19,7 +19,8 @@ $breakpoint-xlarge: 1200px;
 
   /* Styles for small screens */
   @media (max-width: $breakpoint-small) {
-    .guarantor-info {    
+    .guarantor-info { 
+      margin-bottom: 20rem;  
       .g-info-cont {
         grid-template-columns: 1fr 1fr ;
         row-gap: 5rem;
@@ -30,6 +31,7 @@ $breakpoint-xlarge: 1200px;
   /* Styles for medium screens */
   @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     .guarantor-info {    
+      background-color: red;
       .g-info-cont {
         grid-template-columns: 1fr 1fr 1fr;
         row-gap: 5rem;

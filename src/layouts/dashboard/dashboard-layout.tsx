@@ -6,7 +6,7 @@ import classes from './dashboard-layout.module.scss';
 import { FaHome, FaRegHandshake, FaUserCheck, FaUsers } from 'react-icons/fa';
 import { PiBriefcaseDuotone, PiCaretDownBold } from 'react-icons/pi';
 import { MdSavings } from 'react-icons/md';
-import { FaHandHoldingDollar, FaSackDollar, FaUserGroup } from 'react-icons/fa6';
+import { FaHandHoldingDollar, FaSackDollar, FaUserGroup, FaX } from 'react-icons/fa6';
 import { useScreen } from '../../hooks/useScreen';
 
 const navigationItems = [
@@ -35,6 +35,7 @@ const DashboardLayout = () => {
         <Navigation toggle={handleDrawer} />
         <div className={classes.main}>
           <div className={`${classes.sidebar} ${screen === "small" && classes.mobile} ${open && classes.visible}`}>
+            <div className={`${classes.close} ${screen === "small" && classes.mobile}`} onClick={handleDrawer}><FaX size={16} /></div>
             <ul className={classes['nav-list']}>
               <li style={{ marginBottom: '3.2rem' }} className={classes['title']}>
                 <NavLink to={'#'}>
