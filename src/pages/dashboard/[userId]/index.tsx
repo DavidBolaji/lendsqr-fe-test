@@ -6,7 +6,7 @@ import UserDetail from "../../../components/details-dashboard/user-details/user-
 import Tabs from "../../../components/tab/tab";
 import { IUser } from "../../../api/fetch-users";
 import { useLendsqrContext } from "../../../context/context-provider";
-// import { useEffect } from "react";
+import classes from './index.module.scss'
 
 const SingleUserPage = () => {
   const { userId } = useParams();
@@ -20,7 +20,7 @@ const SingleUserPage = () => {
       <BackNav />
       <div className="flex space" style={{ marginTop: "1.2rem" }}>
         <Title text="User Details" />
-        <div className="flex" style={{ gap: "2rem" }}>
+        <div className={classes['btn-cont']} style={{ gap: "2rem" }}>
           <CustomButton
             text="Blacklist User"
             className="text-error transparent"

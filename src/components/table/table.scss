@@ -246,3 +246,21 @@
   top: 0;
   transform: translateX(200px);
 }
+
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px; 
+
+/* Styles for small screens */
+@media (max-width: $breakpoint-small) {
+  .hide {
+    display: none;
+  }
+}
+
+/* Styles for small screens */
+@media (max-width: $breakpoint-medium) {
+  .hide {
+    display: none;
+  }
+}

@@ -1,3 +1,9 @@
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
 .p-info-cont {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -6,3 +12,19 @@
     padding-bottom: 3rem;
     border-bottom: 1px solid #21407d47; 
 }
+
+  /* Styles for small screens */
+  @media (max-width: $breakpoint-small) {
+    .p-info-cont {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 5rem;
+    }
+  }
+  
+  /* Styles for medium screens */
+  @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
+    .p-info-cont {
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 5rem;
+    }
+  }

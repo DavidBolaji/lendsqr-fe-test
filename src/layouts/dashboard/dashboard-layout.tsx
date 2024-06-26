@@ -7,6 +7,7 @@ import { FaHome, FaRegHandshake, FaUserCheck, FaUsers } from 'react-icons/fa';
 import { PiBriefcaseDuotone, PiCaretDownBold } from 'react-icons/pi';
 import { MdSavings } from 'react-icons/md';
 import { FaHandHoldingDollar, FaSackDollar, FaUserGroup } from 'react-icons/fa6';
+import { useScreen } from '../../hooks/useScreen';
 
 const navigationItems = [
   { name: 'Users', path: '/dashboard/users', icon: <FaUserGroup size={15} /> },
@@ -23,13 +24,17 @@ const navigationItems = [
 
 const DashboardLayout = () => {
   const [activeItem, setActiveItem] = useState('/dashboard/users');
+  const [open, setOpen] = useState(false);
+  const screen = useScreen()
+
+  const handleDrawer = () => setOpen(prev => !prev);
 
   return (
     <Wrapper>
       <div className={classes.mainOne}>
-        <Navigation />
+        <Navigation toggle={handleDrawer} />
         <div className={classes.main}>
-          <div className={classes.sidebar}>
+          <div className={`${classes.sidebar} ${screen === "small" && classes.mobile} ${open && classes.visible}`}>
             <ul className={classes['nav-list']}>
               <li style={{ marginBottom: '3.2rem' }} className={classes['title']}>
                 <NavLink to={'#'}>
@@ -70,7 +75,7 @@ const DashboardLayout = () => {
               ))}
             </ul>
           </div>
-          <div className={classes.page}>
+          <div className={`${classes.page} ${classes.mobile}`}>
             <Outlet />
           </div>
         </div>

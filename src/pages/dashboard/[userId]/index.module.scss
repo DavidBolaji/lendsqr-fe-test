@@ -1,0 +1,17 @@
+/* Define breakpoints */
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-xlarge: 1200px;
+
+.btn-cont {
+    display: flex;
+}
+
+  /* Styles for small screens */
+  @media (max-width: $breakpoint-small) {
+    .btn-cont {
+        flex-direction: column;
+    }
+  }
+  

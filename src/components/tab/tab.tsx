@@ -1,4 +1,4 @@
-import { FC, ReactNode, useState } from 'react';
+import { FC, ReactNode, useState, useRef } from 'react';
 import './tab.scss';
 import PersonalInfo from '../details-dashboard/personal-info/personal-info';
 import EducationEmployment from '../details-dashboard/education-employement/education-employement';
@@ -9,6 +9,7 @@ import { IUser } from '../../api/fetch-users';
 
 const Tabs: FC<{ user: Partial<IUser> }> = ({ user }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const tabRefs = useRef<HTMLDivElement[]>([]);
 
   const tabs = [
     'General Details',
@@ -111,6 +112,7 @@ const Tabs: FC<{ user: Partial<IUser> }> = ({ user }) => {
 
   const handleTabClick = (index: number) => {
     setActiveTab(index);
+    tabRefs.current[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
   };
 
   const tabWidth = 100 / tabs.length;
@@ -124,6 +126,7 @@ const Tabs: FC<{ user: Partial<IUser> }> = ({ user }) => {
             className={`tab ${activeTab === index ? 'active' : ''}`}
             onClick={() => handleTabClick(index)}
             style={{ width: `${tabWidth}%` }}
+            ref={(el) => (tabRefs.current[index] = el!)}
           >
             {tab}
           </div>
