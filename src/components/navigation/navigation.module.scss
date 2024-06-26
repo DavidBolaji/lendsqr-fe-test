@@ -112,9 +112,14 @@ $breakpoint-xlarge: 1200px;
         margin-right: 0rem;
         flex: 0;
         .img-img {
-          width: 15rem;
+          width: 5rem;
+          // display: none;
         }
      
+      }
+
+      .search {
+        transform: scale(0.9);
       }
      }
   
