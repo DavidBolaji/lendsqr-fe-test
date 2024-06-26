@@ -1,0 +1,18 @@
+.cont {
+    display: flex;
+    gap: 1.3rem;
+    align-items: center;
+
+
+    .icon {
+        color: #545F7D;
+        margin-top: 0.2rem;
+    }
+
+    .text {
+        font-size: 1.6rem;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        color: #545F7D;
+    }
+}

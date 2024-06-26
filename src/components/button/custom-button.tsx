@@ -5,10 +5,10 @@ interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
     text: string | React.ReactNode
   }
 
-const CustomButton:React.FC<IButton> = ({text, ...rest}) => {
+const CustomButton:React.FC<IButton> = ({text, className, ...rest}) => {
   return (
     <button
-      className={`${classes.btn} ${rest.disabled && classes.disabled} `}
+      className={`${classes.btn} ${rest.disabled && classes.disabled} ${className}`}
       type="button"
       {...rest}
     >

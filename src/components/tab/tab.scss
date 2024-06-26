@@ -1,0 +1,40 @@
+.tabs-container {
+    width: 100%;
+  
+    .tabs {
+      display: flex;
+      position: relative;
+      background-color: #fff;
+  
+      .tab {
+        padding: 1rem;
+        text-align: center;
+        cursor: pointer;
+        transition: color 0.3s;
+        font-size: 1.6rem;
+        font-family: var(--font-default);
+  
+        &.active {
+          color: var(--primary);
+        }
+      }
+  
+      .border {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: var(--primary);
+        transition: left 0.3s ease-in-out;
+      }
+    }
+  
+    .tab-content {
+      margin-top: 3rem;
+      padding: 3rem;
+      background-color: #fff;
+      border-top: none;
+      border-radius: .8rem;
+      box-shadow: 0.3rem .5rem 2rem  rgba(0, 0, 0, 0.04);
+    }
+  }
+  

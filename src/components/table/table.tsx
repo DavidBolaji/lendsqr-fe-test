@@ -1,9 +1,13 @@
-import React, { useState, ChangeEvent, useRef, useEffect } from 'react';
+import React, { useState, ChangeEvent, useRef, useEffect, useCallback } from 'react';
 import './table.scss';
 import { IoFilterSharp } from 'react-icons/io5';
 import Tag from '../tag/tag';
 import { HiDotsVertical } from 'react-icons/hi';
 import { PiCaretLeftBold, PiCaretRightBold } from 'react-icons/pi';
+import { FaEye } from 'react-icons/fa6';
+import { FiUserX } from 'react-icons/fi';
+import { LuUserCheck } from 'react-icons/lu';
+import { useNavigate } from 'react-router-dom';
 
 interface Column {
   header: string;
@@ -12,7 +16,8 @@ interface Column {
 
 interface TableProps {
   columns: Column[];
-  data: any[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: any;
   rowsPerPage?: number;
 }
 
@@ -23,6 +28,8 @@ const Table: React.FC<TableProps> = ({ columns, data, rowsPerPage = 5 }) => {
   const [filterIndex, setFilterIndex] = useState<number | null>(null);
   const [filterValues, setFilterValues] = useState<{ [key: string]: string }>({});
   const tableDiv = useRef<HTMLDivElement | null>(null)
+
+  const navigate = useNavigate()
 
   const getStatusClass = (status: string) => {
     switch (status) {
@@ -49,9 +56,9 @@ const Table: React.FC<TableProps> = ({ columns, data, rowsPerPage = 5 }) => {
     setCurrentPage(1);
   };
 
-  const handleDropdownToggle = (index: number) => {
+  const handleDropdownToggle = useCallback((index: number) => {
     setDropdownIndex(dropdownIndex === index ? null : index);
-  };
+  }, [dropdownIndex]);
 
   const handleFilterToggle = (index: number) => {
     setFilterIndex(filterIndex === index ? null : index);
@@ -70,6 +77,7 @@ const Table: React.FC<TableProps> = ({ columns, data, rowsPerPage = 5 }) => {
     setFilterIndex(null);
   };
 
+
   useEffect(() => {
     const target = tableDiv.current;
     const holder = ['filter-btn', 'filter-form active', 'filter-input']
@@ -77,7 +85,8 @@ const Table: React.FC<TableProps> = ({ columns, data, rowsPerPage = 5 }) => {
     if (target) {
       target.addEventListener('click', (e) => {
         if(e.target) {
-          //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          //@ts-expect-error
            const close = holder.includes(e.target.getAttribute('class'))
           if (!close) {
               setFilterIndex(null);
@@ -89,7 +98,7 @@ const Table: React.FC<TableProps> = ({ columns, data, rowsPerPage = 5 }) => {
 
   
     return () => target!.removeEventListener('click', () => null)
-  }, [tableDiv.current])
+  }, [handleDropdownToggle])
 
   const startIndex = (currentPage - 1) * rowsLimit;
   const endIndex = startIndex + rowsLimit;
@@ -119,8 +128,8 @@ const Table: React.FC<TableProps> = ({ columns, data, rowsPerPage = 5 }) => {
                       className='filter-input'
                     />
                     <div className='filter-btn-cont'>
-                      <button className='filter-btn' onClick={() => handleFilterSubmit(col.accessor)}>Apply</button>
-                      <button className='filter-btn' onClick={() => handleFilterSubmit(col.accessor)}>Reset</button>
+                      <button className='reset-btn' onClick={() => handleFilterSubmit(col.accessor)}>Reset</button>
+                      <button className='filter-btn' onClick={() => handleFilterSubmit(col.accessor)}>Filter</button>
                     </div>
                   </div>
                 )}
@@ -130,29 +139,35 @@ const Table: React.FC<TableProps> = ({ columns, data, rowsPerPage = 5 }) => {
           </tr>
         </thead>
         <tbody>
-          {currentData.map((row, rowIndex) => (
+          {currentData.map((row: never, rowIndex: number) => (
             <tr key={rowIndex}>
               {columns.map((col) => (
-                col.accessor === "status" ? <td key={col.accessor} >
+                col.accessor === "status" ? <td onClick={() => navigate(`/dashboard/${rowIndex}`)} key={col.accessor} >
                   <Tag value={getStatusClass(row[col.accessor])} text={row[col.accessor]} />
-                </td>:<td key={col.accessor}>{row[col.accessor]}</td>
+                </td>:<td onClick={() => navigate(`/dashboard/${rowIndex}`)} key={col.accessor}>{row[col.accessor]}</td>
               ))}
               <td className="dropdown-cell">
                 <HiDotsVertical size={20} onClick={() => handleDropdownToggle(rowIndex)} />
                 {dropdownIndex === rowIndex && (
                   <div className="dropdown-menu">
                     <div className="dropdown-item">
-                      <span className="icon">🔍</span>
-                      View
+                      <span className="icon">
+                        <FaEye />
+                      </span>
+                      <span className='text'>View Details </span>
                     </div>
                     <div className="dropdown-item">
-                      <span className="icon">✏️</span>
-                      Edit
+                      <span className="icon">
+                      <FiUserX />
+                      </span>
+                      <span className='text'>Blacklist User </span>
                     </div>
                     <div className="dropdown-item">
-                      <span className="icon">🗑️</span>
-                      Delete
-                    </div>
+                      <span className="icon">
+                      <LuUserCheck />
+                      </span>
+                      <span className='text'>Activate User </span>
+                    </div>``
                   </div>
                 )}
               </td>
