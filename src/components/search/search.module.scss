@@ -49,13 +49,52 @@ $breakpoint-xlarge: 1200px;
 
   /* Styles for small screens */
   @media (max-width: $breakpoint-small) {
- 
+    .search-input {
+      max-width: 20rem;
+
+      ::placeholder {
+        font-size: 0.8em;
+      }
+
+      .cont {
+        flex: 0.85;
+        height: 90%;
+       
+        input.input {
+          padding: 0 1rem;
+        }
+      }
+      .btn {
+        flex: 0.15
+      }
+    }
   }
   
   /* Styles for medium screens */
   @media (min-width: $breakpoint-small) and (max-width: $breakpoint-medium) {
     .search-input {
       max-width: 30rem;
+
+      ::placeholder {
+        font-size: 0.8em;
+      }
+
+      .cont {
+        flex: 0.85;
+        height: 90%;
+       
+        input.input {
+          padding: 0 1rem;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+        }
+      }
+      .btn {
+        flex: 0.15
+      }
     }
   }
   
