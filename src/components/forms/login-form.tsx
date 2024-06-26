@@ -39,7 +39,7 @@ const LoginForm = () => {
       setLoading(false);
       navigate('/dashboard');
       clearTimeout(t);
-    }, 3000);
+    }, 5000);
   };
 
   return (

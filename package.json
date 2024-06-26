@@ -7,7 +7,8 @@
     "dev": "vite --port=4001",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "test": "vitest"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.45.1",
@@ -17,14 +18,18 @@
     "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.23.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {
     "@tanstack/eslint-plugin-query": "^5.43.1",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@types/react-helmet": "^6.1.11",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
@@ -32,11 +37,13 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.2",
     "sass": "^1.77.6",
     "typescript": "5.0",
-    "vite": "^5.2.0"
+    "vite": "^5.2.0",
+    "vitest": "^1.6.0"
   },
   "husky": {
     "hooks": {

@@ -65,9 +65,15 @@ $breakpoint-xlarge: 1200px;
 
  .right {
   width: 100%;
+
+  .right_cont {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
  }
  .cont {
   height:100vh;
+
 }
 }
 
@@ -79,6 +85,12 @@ $breakpoint-xlarge: 1200px;
   
    .right {
     width: 100%;
+
+
+    .right_cont {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
    }
 
    .cont {

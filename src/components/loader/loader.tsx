@@ -11,6 +11,7 @@ const Loader: React.FC<ILoader> = ({ style, ...rest }) => {
         ...style,
       }}
       {...rest}
+      data-testid="loader"
     ></div>
   );
 };
