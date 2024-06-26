@@ -42,7 +42,8 @@ const Info: React.FC<{ title: string; text: string }> = ({ title, text }) => {
         color:" #545F7D",
         fontSize: '1.6rem',
         fontWeight: 500,
-        width: "100%"
+        width: "100%",
+        textTransform: "capitalize"
       }}
      
       >{text}</p>

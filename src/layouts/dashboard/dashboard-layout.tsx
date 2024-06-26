@@ -9,7 +9,7 @@ import { MdSavings } from 'react-icons/md';
 import { FaHandHoldingDollar, FaSackDollar, FaUserGroup } from 'react-icons/fa6';
 
 const navigationItems = [
-  { name: 'Users', path: '/users', icon: <FaUserGroup size={15} /> },
+  { name: 'Users', path: '/dashboard/users', icon: <FaUserGroup size={15} /> },
   { name: 'Guarantors', path: '/guarantors', icon: <FaUsers size={15} /> },
   { name: 'Loans', path: '/loans', icon: <FaSackDollar size={15} /> },
   { name: 'Decision Models', path: '/decision-models', icon: <FaRegHandshake size={15} />},
@@ -22,7 +22,7 @@ const navigationItems = [
 
 
 const DashboardLayout = () => {
-  const [activeItem, setActiveItem] = useState('/dashboard');
+  const [activeItem, setActiveItem] = useState('/dashboard/users');
 
   return (
     <Wrapper>
