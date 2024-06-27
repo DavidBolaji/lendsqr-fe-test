@@ -22,36 +22,35 @@ This project demonstrates a frontend application using modern web development te
 - **TanStack React Query**: For powerful server state management.
 
 ## Project Structure
-The project structure is as follows:
-lendsqr-fe-test/ \n
-├── public/ # Public assets \n
-│ └── index.html # Main HTML file \n
-├── src/ # Source files \n
-│ ├── api/ # Server calls assets \n
-│ ├── assets/ # Static assets \n
-│ ├── context # provider for handling caching \n
-│ ├── components/ # Reusable components \n
-│ ├── hooks/ # Custom hooks \n
-│ ├── layouts/ # UI hooks \n
-│ ├── pages/ # Page components \n
-│ ├── _colors.scss / # SCSS colors \n
-│ ├── App.test.tsx / # Test for Main App Component \n
-│ ├── App.tsx # Main App component \n
-│ ├── fonts.scss / # Define fonts \n
-│ ├── global.scss / # Global style for app \n
-│ ├── main.tsx / # Entry point of app \n
-│ ├── setupTests.ts / # Setup for testing \n
-│ └── setupTests.d.ts / # Setup typescript for testing \n
-│ └── vite-env.d.ts / # vite type defination \n
-├── .eslintrc.cjs # ESLint configuration \n
-├── .gitignore # Git ignore file \n
-├── .prettierrc # Prettier configuration \n
-├── index.html # \n
-├── package-lock.json # Project dependencies and scripts \n
-├── package.json # Project dependencies and scripts \n
-├── tsconfig.json # TypeScript configuration \n
-├── tsconfig.node.json # TypeScript configuration \n
-└── vite.config.ts # Vite configuration \n
+lendsqr-fe-test/
+├── public/ # Public assets
+│ └── index.html # Main HTML file
+├── src/ # Source files
+│ ├── api/ # Server calls assets
+│ ├── assets/ # Static assets
+│ ├── context # Provider for handling caching
+│ ├── components/ # Reusable components
+│ ├── hooks/ # Custom hooks
+│ ├── layouts/ # UI hooks
+│ ├── pages/ # Page components
+│ ├── _colors.scss # SCSS colors
+│ ├── App.test.tsx # Test for Main App Component
+│ ├── App.tsx # Main App component
+│ ├── fonts.scss # Define fonts
+│ ├── global.scss # Global style for app
+│ ├── main.tsx # Entry point of app
+│ ├── setupTests.ts # Setup for testing
+│ ├── setupTests.d.ts # Setup TypeScript for testing
+│ └── vite-env.d.ts # Vite type definition
+├── .eslintrc.cjs # ESLint configuration
+├── .gitignore # Git ignore file
+├── .prettierrc # Prettier configuration
+├── index.html
+├── package-lock.json # Project dependencies and scripts
+├── package.json # Project dependencies and scripts
+├── tsconfig.json # TypeScript configuration
+├── tsconfig.node.json # TypeScript configuration
+└── vite.config.ts # Vite configuration
 
 ## Getting Started
 To get started with the project, follow these steps:
