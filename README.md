@@ -23,7 +23,7 @@ This project demonstrates a frontend application using modern web development te
 
 ## Project Structure
 
-![Alt text](https://screenrec.com/share/VJYtFuL2RT)
+![project](https://drive.google.com/file/d/1t7geV98aZKy3OPboaGq4_W19--PELziY/view?usp=sharing)
 
 ## Getting Started
 To get started with the project, follow these steps:
