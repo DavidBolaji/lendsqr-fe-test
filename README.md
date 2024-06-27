@@ -23,7 +23,7 @@ This project demonstrates a frontend application using modern web development te
 
 ## Project Structure
 
-![https://drive.google.com/file/d/1t7geV98aZKy3OPboaGq4_W19--PELziY/view?usp=sharing](https://drive.google.com/file/d/1t7geV98aZKy3OPboaGq4_W19--PELziY/view?usp=sharing)
+![https://drive.google.com/file/d/1t7geV98aZKy3OPboaGq4_W19--PELziY/view?usp=sharing](https://github.com/davidbolaji/lendsqr-fe-test/blob/readme_edit/image.png?raw=true)
 
 ## Getting Started
 To get started with the project, follow these steps:
