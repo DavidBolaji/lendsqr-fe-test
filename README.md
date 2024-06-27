@@ -22,35 +22,8 @@ This project demonstrates a frontend application using modern web development te
 - **TanStack React Query**: For powerful server state management.
 
 ## Project Structure
-lendsqr-fe-test/
-├── public/ # Public assets
-│ └── index.html # Main HTML file
-├── src/ # Source files
-│ ├── api/ # Server calls assets
-│ ├── assets/ # Static assets
-│ ├── context # Provider for handling caching
-│ ├── components/ # Reusable components
-│ ├── hooks/ # Custom hooks
-│ ├── layouts/ # UI hooks
-│ ├── pages/ # Page components
-│ ├── _colors.scss # SCSS colors
-│ ├── App.test.tsx # Test for Main App Component
-│ ├── App.tsx # Main App component
-│ ├── fonts.scss # Define fonts
-│ ├── global.scss # Global style for app
-│ ├── main.tsx # Entry point of app
-│ ├── setupTests.ts # Setup for testing
-│ ├── setupTests.d.ts # Setup TypeScript for testing
-│ └── vite-env.d.ts # Vite type definition
-├── .eslintrc.cjs # ESLint configuration
-├── .gitignore # Git ignore file
-├── .prettierrc # Prettier configuration
-├── index.html
-├── package-lock.json # Project dependencies and scripts
-├── package.json # Project dependencies and scripts
-├── tsconfig.json # TypeScript configuration
-├── tsconfig.node.json # TypeScript configuration
-└── vite.config.ts # Vite configuration
+
+![Alt text](https://screenrec.com/share/VJYtFuL2RT)
 
 ## Getting Started
 To get started with the project, follow these steps:
