@@ -66,18 +66,22 @@ To get started with the project, follow these steps:
    git clone https://github.com/DavidBolaji/lendsqr-fe-test.git
    cd lendsqr-fe-test
   ```
+
 2. **Install dependencies**:
    ```bash
    npm install
   ```
+
 3. **Run the development server**:
    ```bash
    npm run dev
   ```
+
 4. **Build the project**:
    ```bash
    npm run build
   ```
+
 5. **Preview the production build**:
    ```bash
    npm run preview
