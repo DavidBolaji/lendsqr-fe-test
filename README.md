@@ -22,36 +22,41 @@ This project demonstrates a frontend application using modern web development te
 - **TanStack React Query**: For powerful server state management.
 
 ## Project Structure
-The project structure is as follows:
+
+```bash
 lendsqr-fe-test/
 ├── public/ # Public assets
 │ └── index.html # Main HTML file
 ├── src/ # Source files
 │ ├── api/ # Server calls assets
 │ ├── assets/ # Static assets
-│ ├── context # provider for handling caching/ 
+│ ├── context # Provider for handling caching
 │ ├── components/ # Reusable components
 │ ├── hooks/ # Custom hooks
 │ ├── layouts/ # UI hooks
 │ ├── pages/ # Page components
-│ ├── _colors.scss / # SCSS colors
-│ ├── App.test.tsx / # Test for Main App Component
+│ ├── _colors.scss # SCSS colors
+│ ├── App.test.tsx # Test for Main App Component
 │ ├── App.tsx # Main App component
-│ ├── fonts.scss / # Define fonts
-│ ├── global.scss / # Global style for app
-│ ├── main.tsx / # Entry point of app
-│ ├── setupTests.ts / # Setup for testing
-│ └── setupTests.d.ts / # Setup typescript for testing
-│ └── vite-env.d.ts / # vite type defination
+│ ├── fonts.scss # Define fonts
+│ ├── global.scss # Global style for app
+│ ├── main.tsx # Entry point of app
+│ ├── setupTests.ts # Setup for testing
+│ ├── setupTests.d.ts # Setup TypeScript for testing
+│ └── vite-env.d.ts # Vite type definition
 ├── .eslintrc.cjs # ESLint configuration
 ├── .gitignore # Git ignore file
 ├── .prettierrc # Prettier configuration
-├── index.html #
+├── index.html
 ├── package-lock.json # Project dependencies and scripts
 ├── package.json # Project dependencies and scripts
-├── tsconfig.json # TypeScript configuration
+├── tsconfig.json # TypeScript 
+
+configuration
 ├── tsconfig.node.json # TypeScript configuration
 └── vite.config.ts # Vite configuration
+
+```
 
 ## Getting Started
 To get started with the project, follow these steps:
@@ -61,18 +66,22 @@ To get started with the project, follow these steps:
    git clone https://github.com/DavidBolaji/lendsqr-fe-test.git
    cd lendsqr-fe-test
   ```
+
 2. **Install dependencies**:
    ```bash
    npm install
   ```
+
 3. **Run the development server**:
    ```bash
    npm run dev
   ```
+
 4. **Build the project**:
    ```bash
    npm run build
   ```
+
 5. **Preview the production build**:
    ```bash
    npm run preview
