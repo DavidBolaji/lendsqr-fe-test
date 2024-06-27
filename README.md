@@ -56,7 +56,6 @@ configuration
 ├── tsconfig.node.json # TypeScript configuration
 └── vite.config.ts # Vite configuration
 
-scss
 ```
 
 ## Getting Started
